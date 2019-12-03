@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WallSteet Bank</title>
+	<link href="css/indext.css"	rel="stylesheet"  />
+	<link rel="shortcut icon"  href="img/bank-icon.jpg">
+	
+
+</head>
+<body>
+		<!-- above section -->
+		<div id ="top" class="sec0">
+			<span>Personal | Business</span>
+			<a href="#jump"><ul>
+				<li>SignUp |</li>
+				<li>SignIn</li>
+			</ul></a>	
+		</div>
+				<!-- header section -->
+		<header>
+			<img src="img/bank-icon.jpg"/>
+			<h1><abbr title="wall street bank">wallStreet<abbr></h1>
+			<ul>
+				<a href="#" target="_blank"><li>Home</li></a>
+				<a href="#" target="_blank"><li>About</li></a>
+				<a href="#hoOp" ><li>Services</li></a>
+				<a href="#" target="_blank"><li>Contact Us</li></a>
+			</ul>
+		</header>
+		<!-- move section -->
+		 	 <div class="tcontainer">
+	    <div class="ticker-wrap">
+	      <div class="ticker-move">
+	        <div class="ticker-item">WallStreet Bank gets USD 2 billion funding from eight investors</div>
+	        <div class="ticker-item">WallStreet Bank sets up panel to find successor to managing director Aditya Puri</div>
+	        <div class="ticker-item">Make instant global transfers between your WallStreet accounts worldwide via online banking or the WallStreet Mobile Banking app.</div>
+	        <div class="ticker-item">We'd love to hear from you on the WallStreet Egypt Social Media channels.</div>
+	      </div>
+	    </div>
+	  </div>
+	  			<!-- intro video section -->
+	  <section class="section3">
+		<h1>MAKE NEXT<br> <span class="hap">HAPPEN NOW</span></h1>
+		<video preload="auto" autoplay="true" muted loop="loop" height="600">
+				<!-- <video controls autoplay loop preload="auto" poster="img/apple-touch-icon.png"> -->
+				<source src="video/Market Loop Background.mp4" type="video/mp4">
+			</video>
+	  </section>
+	  					<!-- sign in signup section -->
+	  <div class="main" id="jump" >
+		<div class="SignUp_section">
+				<h1>Create your Bank Account</h1>
+				<input type="text" name="text" placeholder="First name" class="fir"/>
+				<input type="text" name="text" placeholder="Last name" class="fir"/>	
+				<br>
+				<input type="email" name="email" placeholder="user name" class="mail" class="mail"/>
+				<br>
+				<input type="password" name="pass" placeholder="Password"  maxlength="7" />
+				<input type="password" name="pass" placeholder="confirm" maxlength="7" />	
+				<br>
+				<input type="submit" name="LogIn" value="Sign Up"  class="sub">
+				<input type="submit" name="LogIn" value="Sign In" onclick="rotateElem()" class="sub">
+				<!-- <button>signup</button> -->
+				<!-- <img src="bank-icon.jpg"> -->
+		</div>
+		<div class="SignIn_section">
+				<h1 
+				>Sign in to your Bank Account</h1>	
+				<input type="email" name="email" placeholder="user name/email" />
+				<br>
+				<input type="password" name="pass" placeholder="Password"  maxlength="7" />
+				<br>
+				<input type="submit" name="LogIn" value="Log In"    class="sub">
+				<input type="submit" name="LogIn" value="Retrun"   onclick="rotateEl()" class="sub">
+		</div>
+	</div>
+
+
+		<!-- content section -->
+	<section class="section4">
+		<div><h3>GLOBAL MARKETS</h3>
+		<h5>Innovation Has No Boundaries</h5>
+		<p>The world’s emerging markets are within reach with SVB. We are the technology-focused bank that enables cross-border business between the United States and Canada, Asia, Latin America, Europe and emerging markets around the globe. For example, our UK team helps entrepreneurs, innovators and investors in the United Kingdom meet their most ambitious goals.</p>
+		</div>
+	</section>
+				<!-- body section -->
+	<section class="sidesec">
+		<h2 id="hoOp" >Our Services</h2>
+		<!-- <article class="article1"> -->
+				<div class="Bank_accounts">
+					<span class="accounts"></span>
+					<a   href="#jump"><h3>Bank accounts</h3></a>
+					<!-- href="#popup1" class="button" -->
+					<p>Make the right choice by banking with WallStreet.</p>				
+				</div>
+
+				<div class="Bank_credit">
+					<!-- <img src="social.jpg">	 -->
+					<span class="credit"></span>
+					<a class="button" href="#popup1"><h3>Bank credit</h3></a>	
+					<p>Find the card that is right for you.</p>
+				</div>
+
+				<div class="Bank_finance">
+					<span class="finance"></span>
+					<a ><h3>Bank finance</h3></a>
+					<!-- class="button" href="#popup1" -->
+					<p>Discover a range of finance options with HSBC.</p>
+				</div>
+				<div class="Bank_carrir"></a>
+					<span class="carrir"></span>
+					<a class="button" href="#popup2"><h3>Bank career</h3></a>
+					<p>Get Your Job in Our Bank</p>			
+				</div>	
+						<!-- start pop up section  -->
+
+						<!-- credit card pop up -->
+					<div id="popup1" class="overlay">
+						<div class="popup">
+							<a class="close" href="#hoOp" >&times;</a>
+							<div class="content">
+										<video preload="auto" autoplay="true" muted loop="loop" height="600">
+											<source src="video/Credit Cards.mp4" type="video/mp4">
+										</video>
+										<h1 style="color:#20a6d9">Harry Make Credit Card</h1>
+
+							</div>
+						</div>
+					</div>
+
+						<!-- career pop up -->
+					<div id="popup2" class="overlay">
+						<div class="popup">
+							<a class="close" href="#hoOp" >&times;</a>
+							<div class="content">
+										<h1 style="color:#20a6d9;text-decoration:underline; padding:50px; ">
+										Get your job in our Bank<br></h1>
+										<input type="text" name="" placeholder="First name"
+											style="margin-left:70px;
+											width: 200px;height:30px;
+											border-radius:10px; 
+											padding-left:5px;
+											margin-bottom: 35px;
+											" 
+										/>
+										<input type="text" name="" placeholder="Last name"
+											style="
+											width: 200px;height:30px;
+											border-radius:10px; 
+											padding-left:5px; 
+
+										 "
+										/>
+										<br>
+										<input type="email" name="" placeholder="your email"
+											style="
+											margin-left:70px;
+											width: 200px;height:30px;
+											border-radius:10px; 
+											padding-left:5px;
+											margin-bottom: 35px;
+											"
+										/>
+										<input type="text" name="" placeholder="your phone number"
+											style="
+											width: 200px;height:30px;
+											border-radius:10px; 
+											padding-left:5px;"
+										/>
+										<br>
+										<h3 style="
+													display:inline-block;
+													margin-left:70px;
+													color:#20a6d9;
+													margin-right: 70px;
+													"
+													>UPload Your CV</h3>
+										<input type="file" name="" value="" >
+										<br>
+										<input type="submit" name="" value="send yor information"
+											style="     margin-left: 300px;
+														width: 170px;
+													    height: 45px;
+													    margin-top: 30px;
+												" 
+										/>
+
+										<img src="img/bank-icon.jpg" 
+											 style="
+											 		width:50%; 
+											 		height:20%;
+											 		float: right;
+
+													"
+										/>
+
+							</div>
+						</div>
+					</div>				
+					</section>
+						<!-- side area section -->
+					<aside class="asidE">
+						<section class="links">
+								<h3>Categories 1</h3>
+								
+							</section>
+					</aside>
+							<!-- end side area section -->
+					<div class="clearfix"></div>
+						<!-- footer section -->
+					<footer>
+						<a href="#top">Back to top <i class="arrow up"></i></a>
+						<h3>© WallStreet Bank Egypt SAE © 2019</h3>
+					</footer>
+
+
+<script src="js/index.js"></script> 
+
+
+</body>
+</html>
