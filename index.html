@@ -5,7 +5,12 @@
 	<title>WallSteet Bank</title>
 	<link href="css/indext.css"	rel="stylesheet"  />
 	<link rel="shortcut icon"  href="img/bank-icon.jpg">
-	
+	<style media="screen">
+		input::-webkit-inner-spin-button,
+		input::-webkit-inner-spin-button{
+			-webkit-appearance: none;
+		}	
+	</style>
 
 </head>
 <body>
@@ -23,7 +28,7 @@
 			<h1><abbr title="wall street bank">wallStreet<abbr></h1>
 			<ul>
 				<a href="#" target="_blank"><li>Home</li></a>
-				<a href="#" target="_blank"><li>About</li></a>
+				<a href="about.html" target="_blank"><li>About Us</li></a>
 				<a href="#hoOp" ><li>Services</li></a>
 				<a href="#" target="_blank"><li>Contact Us</li></a>
 			</ul>
@@ -48,31 +53,30 @@
 			</video>
 	  </section>
 	  					<!-- sign in signup section -->
+	  
 	  <div class="main" id="jump" >
+		
 		<div class="SignUp_section">
-				<h1>Create your Bank Account</h1>
-				<input type="text" name="text" placeholder="First name" class="fir"/>
-				<input type="text" name="text" placeholder="Last name" class="fir"/>	
+				<form style="display: inline;" action="index.php" method="POST"><h1>Create your Bank Account</h1>
+				<input type="text" name="username1" placeholder="First name" class="fir" required/>
+				<input type="text" name="username2" placeholder="Last name" class="fir" required />	
 				<br>
-				<input type="email" name="email" placeholder="user name" class="mail" class="mail"/>
+				<input type="email" name="email" placeholder="Email" class="mail" class="mail" required/>
 				<br>
-				<input type="password" name="pass" placeholder="Password"  maxlength="7" />
-				<input type="password" name="pass" placeholder="confirm" maxlength="7" />	
+				<input type="password" name="password" placeholder="Password"  maxlength="20" required />
+				<input type="password" name="pass" placeholder="Confirm Password" maxlength="20" required/>	
 				<br>
-				<input type="submit" name="LogIn" value="Sign Up"  class="sub">
-				<input type="submit" name="LogIn" value="Sign In" onclick="rotateElem()" class="sub">
-				<!-- <button>signup</button> -->
-				<!-- <img src="bank-icon.jpg"> -->
+				<input type="submit" name="LogIn" value="Sign Up"></form>
+				<button onclick="rotateElem()" class="sub">SignIn</button>
 		</div>
 		<div class="SignIn_section">
-				<h1 
-				>Sign in to your Bank Account</h1>	
-				<input type="email" name="email" placeholder="user name/email" />
+				<form style="display: inline;"><h1>Sign in to your Bank Account</h1>	
+				<input type="email" name="email" placeholder="user name" />
 				<br>
 				<input type="password" name="pass" placeholder="Password"  maxlength="7" />
 				<br>
-				<input type="submit" name="LogIn" value="Log In"    class="sub">
-				<input type="submit" name="LogIn" value="Retrun"   onclick="rotateEl()" class="sub">
+				<input type="submit" name="LogIn" value="Log In" ></form>
+				<button onclick="rotateEl()" class="sub">Retrun</button>  
 		</div>
 	</div>
 
@@ -202,21 +206,56 @@
 						<!-- side area section -->
 					<aside class="asidE">
 						<section class="links">
-								<h3>Categories 1</h3>
-								
+								<h3> play with your money</h3>
+								<div class="container">
+
+									<button class="buy_money">buy money</button>
+									<section class="currency_buy">
+						
+									   <input type="number" pattern="[0-9]" id="amount_buy" name="amount_buy" placeholder="write a number" >
+										<p> from </p>
+										<select id="from_buy">
+											<option value="USD" name="USD">USD</option>
+											<option value="EUR" name="EUR" >EUR</option>
+											<option value="CAD" name="CAD" >CAD</option>
+											<option value="GBP" name="GBP">GBP</option>
+											<option value="SAR" name="SAR" >SAR</option>
+											<option value="KWD" name="KWD" >KWD</option>
+											<option value="JPY" name="JPY" >JPY</option>
+											<option value="LE" name="LE" >LE</option>
+											<option value="CHF" name="CHF" >CHF</option>
+										</select>
+										<p> to </p>
+										<select id="to_buy">
+												<option value="USD" name="USD">USD</option>
+												<option value="EUR" name="EUR" >EUR</option>
+												<option value="CAD" name="CAD" >CAD</option>
+												<option value="GBP" name="GBP">GBP</option>
+												<option value="SAR" name="SAR" >SAR</option>
+												<option value="KWD" name="KWD" >KWD</option>
+												<option value="JPY" name="JPY" >JPY</option>
+												<option value="LE" name="LE" >LE</option>   
+												<option value="CHF" name="CHF" >CHF</option>      
+										 </section>
+									<input type="submit" id="submit_buy" value="convert" onclick="convert_buy()" >  
+						
+									<div id="conversion"> </div>
+
+									
+								</div>
 							</section>
+
+							
 					</aside>
 							<!-- end side area section -->
 					<div class="clearfix"></div>
+
+					<section class="social_footer"><div class="position">Connect with Us</div> </section>
 						<!-- footer section -->
 					<footer>
-						<a href="#top">Back to top <i class="arrow up"></i></a>
+						<span><a href="#top">Back to top <i class="arrow up"></i></a></span>
 						<h3>© WallStreet Bank Egypt SAE © 2019</h3>
 					</footer>
-
-
 <script src="js/index.js"></script> 
-
-
 </body>
 </html>

@@ -1,0 +1,319 @@
+*
+{
+	padding:0;
+	margin: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	list-style-type: none;
+	text-decoration:none;
+	max-width:100%;
+	
+	/*reset page**/
+
+}
+.sec0 
+{
+	background-color:black;
+	height:30px; 
+	color:white;
+}
+.sec0 a
+{
+	color:white; 
+}
+.sec0 span,ul,li
+{
+	display:inline-block;
+}
+.sec0 span
+{
+margin-left:50px; 
+}
+.sec0 ul 
+{
+	margin-left:70%; 
+	margin-top:5px; 
+}
+
+header 
+{
+	height:70px;
+	font-size:20px;  
+	border-bottom-width: 1px;
+	border-bottom-color:  #db0011 ;
+	border-bottom-style: solid;
+	position: sticky;
+	top: 0; 
+	background-color: white;
+	opacity:.8; 
+	z-index:10; 
+}
+header img 
+{
+	padding:2px; 
+	margin: 2px;
+	margin-left:70px; 
+	height:60px; 
+	float: left;
+	border-width:1px;
+	border-color: #db0011;
+	border-style:solid;
+}
+header h1 
+{
+		display: inline-block;
+		font-family: Brush Script MT;
+		float: left;
+		margin-top:10px; 
+}
+header ul 
+{
+	float: right;
+	margin-top:30px;
+	margin-right:200px;
+	font-weight:bold;
+	/*color: black;*/
+}
+header ul a li 
+{
+	padding-left:70px; 
+	color:#0d2a6b;  
+
+}
+header ul a li:hover 
+{
+	color:#ecbb8f;
+}
+header ul a li:after
+{
+	content: " | ";
+	color: white;
+
+}
+header ul a li:last-child:after
+/*   hena b2olo a5er 7aga b3d a5r li sheel el |   */
+{
+	content: "";
+}
+
+
+ @keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+  .tcontainer{
+    width: 100%;
+    overflow: hidden;
+  }
+  .ticker-wrap {
+  	height:30px;
+  	padding-top:5px; 
+    width: 100%;
+    padding-left: 100%;
+    background-color: #eee;
+  }
+  .ticker-move {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 40s;
+  }
+  .ticker-move:hover{
+    animation-play-state: paused;
+  }
+  .ticker-item{
+    display: inline-block;
+    padding: 0 2rem;
+  }
+body
+{
+	margin: 5px;
+padding: 5px;
+bakground:#eee;
+max-width:100%;
+}
+.header
+{
+    background: #333;
+    color:#FFF;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0
+}
+
+minor 
+{
+ font-size:30px;
+	color:#0d2a6b;
+	padding: 10px 0;
+text-align: center;
+font-weight: bold;
+}
+.PersonalLoan , .Inlet ,  .PayBills , .Withdraw , .CompanyLoan
+{
+	font-size:30px;
+	display:inline-block;
+}
+.PersonalLoan legend , .Inlet legend ,  .PayBills legend , .Withdraw legend , .CompanyLoan legend
+{
+	font-size:30px;
+	font-weight: bold;
+	background:#eee;
+}
+button 
+{
+  background-color: #4CAF50;
+  border: 1px solid #CCC;
+  color: white;
+  padding: 16px 32px;
+		float:left;
+		cursor: pointer;
+		margin-top:20px;
+  margin-right:40px;
+		font-size: 20px;
+		border-radius:20px;
+}
+input[type=text]
+{
+	margin-top:10px;
+	margin-bottom: 10px;
+	padding: 16px 32px;
+	width:210px;
+	height:50px;
+			font-size: 20px;
+		border-radius:20px;
+}
+
+
+a
+{
+    color: #0d2a6b;
+    text-decoration:none ;  
+    margin: 30px 30px 80px 10px;
+			
+}
+a:hover
+{
+    color:bisque;
+    text-decoration: underline
+}
+
+.imgborder
+{
+    padding: 10px;
+  margin: 30px 30px;
+		 max-width: 100%;
+}
+
+.blogs div
+{
+	 display: inline-block;
+    background:#EFEFEF;
+    color:blue;
+    padding: 20px 0;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 40px 20px ;
+				width:400px;
+				height: 100px;
+				margin-right:100px;
+}
+.content h1 , h4 , h5
+{
+padding:10px 30px 0px 30px;
+	font-size:50px;
+	color: #20a6d9;
+}
+
+div.content  img {
+	   margin-top:20px;
+    min-width:100%;
+				min-height:100%;
+}
+label,input{display: block}
+
+form
+{
+    background: beige;
+    border: 1px solid #CCC;
+    padding: 20px;
+    margin-bottom: 20px;
+				width:300px;
+				display:inline-block;
+				margin-left:50px;
+				margin-top:20px;
+}
+/* Loan - save - travel ona a budget - credit card */
+.loan , .save , .budget , .card
+{
+	color: Black;
+	font-size: 30px;
+	font-weight: bold ;
+	padding: 10px;
+	margin: 30px;
+}
+.loan h2:hover , .save h2:hover , .budget h2:hover , .card h2:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.loan h2 , .save h2 , .budget h2 , .card h2
+{
+	text-align: center
+}
+legend
+{
+    background: #FFF;
+    border: 1px solid #CCC;
+    padding: 10px;
+}
+.clearfix
+{
+	clear: both;
+}
+.footer 
+{
+	background-color:#ccc5c5;
+	height:60px; 
+}
+.footer a
+{
+	display:inline-block;
+	margin-left:70px; 
+	margin-top:20px; 
+}
+.footer a:hover 
+{
+	text-decoration: underline;
+	color: #20a6d9;
+}
+
+.footer h3
+{
+ color: #20a6d9;
+ display: inline-block;
+text-align: center;
+ /*margin:20px; */
+ margin-left:350px; 
+}
+
+i
+{
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+
+
+
+

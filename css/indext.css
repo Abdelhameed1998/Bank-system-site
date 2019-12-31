@@ -27,9 +27,14 @@ body
 {
 	color:white; 
 }
-.sec0 span,ul,li
+.sec0 span
 {
 	display:inline-block;
+}
+.sec0 ul,li
+{
+	display:inline-block;
+	
 }
 .sec0 span
 {
@@ -50,7 +55,7 @@ header
 	position: sticky;
 	top: 0; 
 	background-color: white;
-	opacity:.8; 
+	opacity:.9; 
 	z-index:10; 
 }
 header img 
@@ -85,9 +90,14 @@ header ul a li
 	color:#0d2a6b;  
 
 }
+
 header ul a li:hover 
 {
 	color:#ecbb8f;
+}
+header a
+{
+	text-shadow: 2px 2px 5px ;
 }
 header ul a li:after
 {
@@ -173,7 +183,7 @@ transition: all 2s ease-in-out;
 {
 	width: 100%;
 	height:400px;
-	border-width:2px;
+	border-width:4px;
 	border-style:solid;
 	border-color:#dadce0;
 	border-radius:15px;
@@ -212,16 +222,17 @@ transition: all 2s ease-in-out;
 	margin-top:50px;
 	color:#20a6d9;
 }
-.SignUp_section input,.SignIn_section input
+.SignUp_section input,.SignIn_section input , .sub
 {
 	
 	margin-top:30px; 
 	height:30px;
-	width:18%; 
+	width:20%; 
 	border-radius:5px;
-	border-width:2px; 
+	border-width:1px; 
 	border-color:  #dadce0;
 	padding-left:5px;
+	font-size: medium;
 	font-weight: bold;
 	font-family: arial 
 }
@@ -240,9 +251,9 @@ transition: all 2s ease-in-out;
 	background-position: bottom; 
 	background-repeat: no-repeat;
 	background-size: cover;
-	width:95%;
+	width:100%;
 	height:400px;
-	margin-left:30px; 
+	/*margin-left:30px; */
 }
 .section4 div 
 {
@@ -280,21 +291,26 @@ transition: all 2s ease-in-out;
 	float: left;
 	font-family:arial; 
 }
+.sidesec div {border-radius: 5px;}
 .sidesec h2
 {
 	padding:10px 30px 0px 30px;
-	font-size:50px;
+	font-size:60px;
 	color: #20a6d9;
 	
 }
+/*
 .sidesec h2:hover
 {
 	text-decoration: underline; 
-}
+}*/
 .asidE
 {
+	margin-top:15px;
+	box-sizing:border-box;
 	width: 30%; 
 	float: right;
+	
 
 }
 .Bank_accounts,.Bank_credit ,.Bank_finance ,.Bank_carrir
@@ -390,8 +406,8 @@ background-position:center;
 }
 .links
 {
-	margin:10px;
-	background-color:lightblue;	  
+	margin:20px;
+
 }
 /*start pop up*/
 
@@ -455,26 +471,43 @@ background-position:center;
 {
 	clear: both;
 }
+.social_footer
+{
+	display:flex;
+	align-items: center;
+	background-color:black;
+	height:60px; 
+	color:white;
+	font-size: 20px;
+}
+.position
+{
+	width:65%;
+	margin:0 auto;
+}
 footer 
 {
-	background-color:#ccc5c5;
-	height:60px; 
+	display:flex;
+	align-items: center;
+	background-color:#2f3640;
+	height:30px; 
 }
 footer a
 {
+	
+	color:white;
 	display:inline-block;
-	margin-left:70px; 
-	margin-top:20px; 
+	margin:auto 0px auto 70px;
 }
+/*footer span{background-color: #0000ee;}*/
 footer a:hover 
 {
-	text-decoration: underline;
-	color: #20a6d9;
+	color: #ffcfac;
 }
 
 footer h3
 {
- color: #20a6d9;
+ color: black;
  display: inline-block;
 text-align: center;
  /*margin:20px; */
@@ -485,15 +518,85 @@ i {
   border: solid black;
   border-width: 0 3px 3px 0;
   display: inline-block;
-  padding: 3px;
+  padding: 2px;
 }
 .up {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }
+/* function from here and some editing*/
+input
+{
+	outline: none;
+
+}
+
+.container
+{
+	box-sizing: border-box;
+	margin-top:20px
+}
+.buy_money,.sell_money 
+{
+	
+	color: black;
+	font-family: tahoma;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	padding: 8px;
+	outline: none;
+	border: none;
+	background-color:transparent;
 
 
+}
+#amount_buy,#amount_sell
+{
+	padding: 7px;
+	font-size: 20px;
+	width:70%;
+	outline: none;
+	border: 1px solid #273c75;
+	border-radius: 5px;
+}
+.currency_buy,.currency_sell p
+{
+	font-size:25px;
+	text-transform: uppercase;
+	color:#20a6d9;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	
+}
+#submit_buy
+{
+	padding: 7px;
+	font-size:20px;
+	margin-top:5px;
+	display: block;
+	width:70%
+}
+#from_buy,#to_buy
+{
+	padding: 4px;
+	border-radius: 5px;
+	font-size: 20px;
+	text-transform:uppercase;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	width:70%
+}
+.asidE h3 
+{
+	color: #20a6d9;
+	margin-top:65px;
+	font-weight: 700;
+	font-size: 2em;
+	text-transform:uppercase;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-
-
+}
+#conversion
+{
+	font-size:large;
+	margin: 25px 0 5px 0;
+}
 
