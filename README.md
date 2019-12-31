@@ -2,6 +2,6 @@
 
 ##project description
 
-it's a software application about bank system 
+it's a software  website application about bank system 
 
 
