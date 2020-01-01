@@ -8,9 +8,9 @@ if (filter_has_var(INPUT_POST,'submit0')){
 class TransactionDemo {
  
     const DB_HOST = 'localhost';
-    const DB_NAME = 'transfer';
+    const DB_NAME = 'bankusers';
     const DB_USER = 'root';
-    const DB_PASSWORD = '123456789';
+    const DB_PASSWORD = '';
  
     /**
      * Open the database connection
@@ -36,7 +36,7 @@ class TransactionDemo {
             $this->pdo->beginTransaction();
  
             // get available amount of the transferer account
-            $sql = 'SELECT amount FROM accounts WHERE id=:to';
+            $sql = 'SELECT amount FROM register WHERE id=:to';
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(array(":to" => $id));
             $availableAmount = (int) $stmt->fetchColumn();
@@ -44,7 +44,7 @@ class TransactionDemo {
  
            
             // add to the receiving account
-            $sql_update_to = 'UPDATE accounts
+            $sql_update_to = 'UPDATE register
                                 SET amount = amount + :amount
                                 WHERE id = :to';
             $stmt = $this->pdo->prepare($sql_update_to);
@@ -86,9 +86,9 @@ if (filter_has_var(INPUT_POST,'submit1')){
 class TransactionDemo {
  
     const DB_HOST = 'localhost';
-    const DB_NAME = 'transfer';
+    const DB_NAME = 'bankusers';
     const DB_USER = 'root';
-    const DB_PASSWORD = '123456789';
+    const DB_PASSWORD = '';
  
     /**
      * Open the database connection
@@ -114,7 +114,7 @@ class TransactionDemo {
             $this->pdo->beginTransaction();
  
             // get available amount of the transferer account
-            $sql = 'SELECT amount FROM accounts WHERE id=:id';
+            $sql = 'SELECT amount FROM register WHERE id=:id';
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(array(":id" => $id));
             $availableAmount = (int) $stmt->fetchColumn();
@@ -126,7 +126,7 @@ class TransactionDemo {
                 return false;
             }
             // deduct from the transferred account
-            $sql_update_from = 'UPDATE accounts
+            $sql_update_from = 'UPDATE register
                 SET amount = amount - :amount
                 WHERE id = :id';
             $stmt = $this->pdo->prepare($sql_update_from);
@@ -169,9 +169,9 @@ if (filter_has_var(INPUT_POST,'submit2')){
 class TransactionDemo {
  
     const DB_HOST = 'localhost';
-    const DB_NAME = 'transfer';
+    const DB_NAME = 'bankusers';
     const DB_USER = 'root';
-    const DB_PASSWORD = '123456789';
+    const DB_PASSWORD = '';
  
     /**
      * Open the database connection
@@ -198,7 +198,7 @@ class TransactionDemo {
  
  
             // add to the receiving account
-            $sql_update_to = 'UPDATE accounts
+            $sql_update_to = 'UPDATE register
                                 SET amount = amount + :amount
                                 WHERE id = :to';
             $stmt = $this->pdo->prepare($sql_update_to);
@@ -238,9 +238,9 @@ if (filter_has_var(INPUT_POST,'submit3')){
 class TransactionDemo {
  
     const DB_HOST = 'localhost';
-    const DB_NAME = 'transfer';
+    const DB_NAME = 'bankusers';
     const DB_USER = 'root';
-    const DB_PASSWORD = '123456789';
+    const DB_PASSWORD = '';
  
     /**
      * Open the database connection
@@ -266,7 +266,7 @@ class TransactionDemo {
             $this->pdo->beginTransaction();
  
             // get available amount of the transferer account
-            $sql = 'SELECT amount FROM accounts WHERE id=:id';
+            $sql = 'SELECT amount FROM register WHERE id=:id';
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(array(":id" => $id));
             $availableAmount = (int) $stmt->fetchColumn();
@@ -277,7 +277,7 @@ class TransactionDemo {
                 return false;
             }
             // deduct from the transferred account
-            $sql_update_from = 'UPDATE accounts
+            $sql_update_from = 'UPDATE register
                 SET amount = amount - :amount
                 WHERE id = :id';
             $stmt = $this->pdo->prepare($sql_update_from);
@@ -326,9 +326,9 @@ if (filter_has_var(INPUT_POST,'submit8')){
 class TransactionDemo {
  
     const DB_HOST = 'localhost';
-    const DB_NAME = 'transfer';
+    const DB_NAME = 'bankusers';
     const DB_USER = 'root';
-    const DB_PASSWORD = '123456789';
+    const DB_PASSWORD = '';
  
     /**
      * Open the database connection
@@ -362,7 +362,7 @@ class TransactionDemo {
             $this->pdo->beginTransaction();
  
          // get available amount of the transferer account
-            $sql = 'SELECT amount FROM accounts WHERE id=:from';
+            $sql = 'SELECT amount FROM register WHERE id=:from';
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(array(":from" => $from));
             $availableAmount = (int) $stmt->fetchColumn();
@@ -373,7 +373,7 @@ class TransactionDemo {
                 return false;
             }
             // deduct from the transferred account
-            $sql_update_from = 'UPDATE accounts
+            $sql_update_from = 'UPDATE register
                 SET amount = amount - :amount
                 WHERE id = :from';
             $stmt = $this->pdo->prepare($sql_update_from);
@@ -381,7 +381,7 @@ class TransactionDemo {
             $stmt->closeCursor();
  
             // add to the receiving account
-            $sql_update_to = 'UPDATE accounts
+            $sql_update_to = 'UPDATE register
                                 SET amount = amount + :amount
                                 WHERE id = :to';
             $stmt = $this->pdo->prepare($sql_update_to);
